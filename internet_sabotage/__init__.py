@@ -8,12 +8,14 @@ from contextdecorator import ContextDecorator
 
 class no_connection(ContextDecorator):
     _module = sys.modules[__name__]
+    original_socket = None
 
     def __init__(self, exception=IOError):
         self.exception = exception
 
     def _enable_socket(self):
         setattr(self._module, '_socket_disabled', False)
+        socket.socket = self.original_socket
 
     def _disable_socket(self):
         setattr(self._module, '_socket_disabled', True)
@@ -24,6 +26,7 @@ class no_connection(ContextDecorator):
 
             return socket.SocketType(*args, **kwargs)
 
+        self.original_socket = socket.socket
         socket.socket = guarded
 
     def __enter__(self):
