@@ -8,7 +8,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='internet-sabotage3',
-    version='0.1.5',
+    version='0.1.6',
     description='Disable network connection for Testing',
     long_description=long_description,
     long_description_content_type='text/x-rst',
