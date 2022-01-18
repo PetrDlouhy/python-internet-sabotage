@@ -10,7 +10,7 @@ Installation
 
 .. code:: shell
 
-    $ pip install internet-sabotage2
+    $ pip install internet-sabotage3
 
 Usage
 -----
