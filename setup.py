@@ -7,14 +7,14 @@ with open('README.rst', 'r') as f:
     long_description = f.read()
 
 setup(
-    name='internet-sabotage2',
-    version='0.1.3',
+    name='internet-sabotage3',
+    version='0.1.4',
     description='Disable network connection for Testing',
     long_description=long_description,
     long_description_content_type='text/x-rst',
     author='André Luiz',
     author_email='contato@xdvl.info',
-    url='https://github.com/dvl/python-internet-sabotage',
+    url='https://github.com/PetrDlouhy/python-internet-sabotage',
     license='MIT',
     classifiers=[
         'Development Status :: 4 - Beta',
